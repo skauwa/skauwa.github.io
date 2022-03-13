@@ -1,0 +1,37 @@
+/* CSS is how you can add style to your website, such as colors, fonts, and positioning of your
+   HTML content. To learn how to do something, just try searching Google for questions like
+   "how to change link color." */
+@font-face {
+  font-family: Roboto;
+  src: url(fonts/RobotoMono-Regular.ttf);
+}
+@font-face {
+  font-family: Nimbus;
+  src: url(fonts/NimbusSans-Regular.otf);
+}
+body {
+  background-color: white;
+  color: black;
+  font-family: Roboto;
+}
+div {
+  padding: 0rem 1rem 0rem 1rem;
+  width: 48rem;
+  max-width: calc(100% - 2rem);
+}
+div img {
+  width: 100%;
+  max-width: 25rem;
+  border: 1px solid black;
+}
+h2 {
+  font-family: Nimbus;
+  margin-bottom: 6pt;
+}
+.word {
+  text-decoration: none;
+  color: inherit;
+}
+.word:hover {
+  text-decoration: underline;
+}

@@ -9,15 +9,44 @@
   font-family: Nimbus;
   src: url(fonts/NimbusSans-Regular.otf);
 }
+header {
+  position: sticky;
+  top: 0;
+  background-color: black;
+  color: white;
+  border: 1px solid black;
+  margin: 0;
+  display: grid;
+  font-family: Nimbus;
+  grid-template-columns: 25% 50% 25%;
+  justify-content: center;
+}
+header h1 {
+  grid-column: 2;
+  text-align: center;
+  margin: 8pt;
+}
+header a {
+  grid-column: 3;
+  align-self: center;
+  padding-left: calc(100% - 4rem);
+}
+header a img {
+  width: 32pt;
+}
+header a img:hover {
+  filter: invert(1);
+}
 body {
   background-color: white;
   color: black;
   font-family: Roboto;
+  margin: 0;
 }
 div {
-  padding: 0rem 1rem 0rem 1rem;
+  padding: 0rem calc(1rem + 8px) 0rem calc(1rem + 8px);
   width: 48rem;
-  max-width: calc(100% - 2rem);
+  max-width: calc(100% - 2rem - 16px);
 }
 div img {
   width: 100%;
@@ -28,10 +57,24 @@ h2 {
   font-family: Nimbus;
   margin-bottom: 6pt;
 }
+ul {
+  margin-top: 0;
+}
+[id] {
+    scroll-margin-top: 60px; // 1
+}
+li:target {
+  background-color: #ffa;
+}
 .word {
   text-decoration: none;
   color: inherit;
 }
 .word:hover {
   text-decoration: underline;
+}
+footer {
+  text-align: center;
+  margin: 12pt;
+  font-family: Nimbus;
 }

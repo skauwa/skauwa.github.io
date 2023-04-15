@@ -14,7 +14,7 @@ header {
   border: 1px solid black;
   margin: 0;
   display: grid;
-  font-family: calibri, sans-serif;
+  font-family: Nimbus;
   grid-template-columns: 25% 50% 25%;
   justify-content: center;
 }
@@ -51,7 +51,7 @@ div img {
   border: 1px solid black;
 }
 h2 {
-  font-family: calibri, sans-serif;
+  font-family: Nimbus;
   margin-bottom: 6pt;
 }
 ul {
@@ -73,6 +73,6 @@ li:target {
 footer {
   text-align: center;
   margin: 12pt;
-  font-family: calibri, sans-serif;
+  font-family: Nimbus;
   height: 30px;
 }

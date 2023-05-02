@@ -54,8 +54,22 @@ h2 {
   font-family: Nimbus;
   margin-bottom: 6pt;
 }
+h2 a {
+  text-decoration: none;
+  color: inherit;
+}
+h2 a:hover {
+  text-decoration: underline;
+}
 span {
     display: inline-block;
+}
+span a {
+  text-decoration: none;
+  color: inherit;
+}
+span a:hover {
+  text-decoration: underline;
 }
 ul {
   margin-top: 0;
@@ -65,13 +79,6 @@ ul {
 }
 li:target {
   background-color: #ffa;
-}
-.word {
-  text-decoration: none;
-  color: inherit;
-}
-.word:hover {
-  text-decoration: underline;
 }
 footer {
   text-align: center;

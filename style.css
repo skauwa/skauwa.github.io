@@ -54,6 +54,9 @@ h2 {
   font-family: Nimbus;
   margin-bottom: 6pt;
 }
+span {
+    display: inline-block;
+}
 ul {
   margin-top: 0;
 }

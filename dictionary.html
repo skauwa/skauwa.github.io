@@ -45,6 +45,7 @@
         <li id="bavi">bavi: (n) berry.</li>
         <li id="berg">berg: (n) hill.</li>
         <li id="beu">beu: (v2) be, have the characteristics of; (adv) habitually.</li>
+        <li id="beudberg">beudberg: (n) mesa, a land formation.</li>
         <li id="bi">bi: (prep) by, via, through.</li>
         <li id="bladra">bladra: (n) bladder.</li>
         <li id="blak">blak: (adj) black.</li>
@@ -60,7 +61,6 @@
         <li id="daili">daili: (n) part; (v1) part of.</li>
         <li id="dal">dal: (n) valley, fjord.</li>
         <li id="daud">daud: (adj) dead, broken.</li>
-        <li id="daudi">daudi: (v2) kill, destroy.</li>
         <li id="dohter">dohter: (n) daughter.</li>
         <li id="drink">drink: (v2) drink.</li>
         <li id="ebnini">ebnini: (n) plains, plateau.</li>
@@ -71,6 +71,7 @@
         <li id="fader">fader: (n) father.</li>
         <li id="faru">faru: (n) color; (v1) the color of.</li>
         <li id="fau">fau: (adj) few, a few.</li>
+        <li id="fani">fani: (n) swamp, marsh, bog.</li>
         <li id="fisk">fisk: (n) fish.</li>
         <li id="fodo">fodo: (n) food.</li>
         <li id="fot">fot: (n) foot.</li>
@@ -88,7 +89,6 @@
         <li id="gumo">gumo: (n) husband, boyfriend.</li>
         <li id="habe">habe: (v2) have, esp. inalienably; (v2) love familially, or as in a friendship.</li>
         <li id="hait">hait: (adj) hot, warm.</li>
-        <li id="haiti">haiti: (v2) heat, warm.</li>
         <li id="halbauwju">halbauwju: (n) peninsula, cape.</li>
         <li id="hald">hald: (v2) hold, have, esp. alienably.</li>
         <li id="hamizi">hamizi: (n) shirt.</li>
@@ -108,6 +108,7 @@
         <li id="hwat">hwat: (v2) that, the [n] that [v]; (v2) that, [v2] such that.</li>
         <li id="hwav">hwav: (n) what, who.</li>
         <li id="hwit">hwit: (adj) white.</li>
+        <li id="-i">-i: (adj &gt; v2) make to be or feel [adj].</li>
         <li id="ijo">ijo: (n) she, it, etc., something close to the speaker.</li>
         <li id="ik">ik: (n) I, me.</li>
         <li id="inne">inne: (adj) inner; (v2) be inside of.</li>
@@ -123,7 +124,6 @@
         <li id="jit">jiv: (n) you all, a small group.</li>
         <li id="jiv">jiv: (n) you all, a large group.</li>
         <li id="kald">kald: (adj) cold, cool.</li>
-        <li id="kaldi">kaldi: (v2) cool, cold.</li>
         <li id="kalik">kalik: (n) glass, cup.</li>
         <li id="kind">kind: (n) child, kid; (n) [one's] child.</li>
         <li id="kistu">kistu: (n) box, chest.</li>
@@ -236,10 +236,8 @@
         <li id="zrubo">zrubo: (adj) bunch of.</li>
         <li id="zu">zu: (n) you.</li>
       </ul>
-    </div>
-    <div>
-        <h2>Selected tables</h2>
-        <pre>
+      <h2>Selected tables</h2>
+      <pre>
 +----------+------+-----+-----+
 |          |  SG  | PAU |  PL |
 +----------+------+-----+-----+
@@ -253,6 +251,7 @@
 +----------+------+-----+-----+
 | DEM.DIST | zano | zat | zai |
 +----------+------+-----+-----+
+
 +-------------+--------+--------+----------+-------+
 |             | Labial | Dental | Alveolar | Velar |
 +-------------+----+---+----+---+----------+---+---+
@@ -266,6 +265,7 @@
 +-------------+----+---+--------+----+-----+-------+
 |       Nasal |    | m |        |    |  n  |       |
 +-------------+----+---+--------+----+-----+-------+
+
 +-------+-------+-------+
 |       | Front | Back  |
 +-------+-------+-------+
@@ -275,10 +275,19 @@
 +-------+-------+-------+
 |  Open |       a       |
 +-------+---------------+
-        </pre>
+      </pre>
     </div>
     <footer>
       © 1206 Nahtblomo
     </footer>
+    <script>
+        const idsList = new URLSearchParams(window.location.search).get("word");
+        if (idsList) {
+            id = idsList.split(",");
+            for (var i = 0; i < id.length; i++){
+                document.getElementById(id[i]).classList.add("highlight");
+            }
+        };
+    </script>
   </body>
 </html>

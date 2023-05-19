@@ -39,6 +39,7 @@ body {
   color: black;
   font-family: Roboto;
   margin: 0;
+  font-size: 16px;
 }
 div {
   padding: 0rem calc(1rem + 8px) 0rem calc(1rem + 8px);
@@ -79,6 +80,13 @@ ul {
 }
 li:target {
   background-color: #ffa;
+}
+li.highlight {
+  background-color: #ffa;
+}
+pre {
+    overflow: hidden;
+    font-size: min(2.75vw,16px);
 }
 footer {
   text-align: center;

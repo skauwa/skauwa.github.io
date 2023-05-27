@@ -494,66 +494,8 @@
     <footer>
       <p>© 1206 Nahtblomo</p>
     </footer>
-    <script>
-        // theme titles/numbering
-        var entries = document.querySelectorAll("div");
-        for (var i = 0; i < entries.length; i++) {
-            var index = (i + 1).toString(12);;
-            index = index.replace("a", "X");
-            index = index.replace("b", "Y");
-
-            var heading = document.createElement("h2");
-            heading.innerHTML = index + "<a href=\"dictionary.html#-izu\">-izu</a> <a href=\"dictionary.html#arundi\">arundi</a>";
-            entries[i].insertAdjacentElement("afterbegin", heading);
-        }
-
-        // image foramtting/links
-        var imgs = document.querySelectorAll("img");
-        for (var i = 0; i < imgs.length; i++) {
-            var prev = imgs[i].previousElementSibling;
-            if (prev && prev.nodeName == "SPAN") {
-                imgs[i].insertAdjacentElement("beforebegin",document.createElement("br"));
-            }
-
-            var words = imgs[i].alt.split(" ");
-            words.sort();
-            if (words[0] == "") {
-                continue;
-            }
-            var link = document.createElement("a");
-            link.href = "dictionary.html";
-
-            if (words.length > 1){
-                link.href += "?word=";
-            }
-            for (var j = 1; j < words.length; j++) {
-                link.href += words[j];
-                if (j < words.length - 1) {
-                    link.href += ",";
-                }
-            }
-            link.href += "#" + words[0];
-            imgs[i].insertAdjacentElement("beforebegin",link);
-            link.appendChild(imgs[i])
-        }
-
-        // sentence breaking/links
-        var spans = document.querySelectorAll("span");
-        for (var s = 0; s < spans.length; s++) {
-            var words = spans[s].innerHTML.split(/( |-|["]|[.]|[,])/);
-
-            for (var w = 0; w < words.length; w++) {
-                if (words[w] == "-") {
-                    words[w] = "-" + words[w + 1];
-                    words.splice(w + 1, 1);
-                }
-                if (/^[a-zA-Z|-]+$/.test(words[w])) {
-                    var link = "<a href=dictionary.html#" + words[w].toLowerCase() + ">" + words[w] + "</a>";
-                   words[w] = link;
-                }
-            }
-            spans[s].innerHTML = words.join("");
-        }
-    </script>
+    <script src="script/make_heading.js"></script>
+    <script src="script/format_img.js"></script>
+    <script src="script/link_word.js"></script>
   </body>
 </html>

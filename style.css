@@ -1,10 +1,10 @@
 @font-face {
   font-family: Roboto;
-  src: url(fonts/RobotoMono-Regular.ttf);
+  src: url(font/RobotoMono-Regular.ttf);
 }
 @font-face {
   font-family: Nimbus;
-  src: url(fonts/NimbusSans-Regular.otf);
+  src: url(font/NimbusSans-Regular.otf);
 }
 header {
   position: sticky;
